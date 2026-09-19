@@ -543,6 +543,21 @@ export const ContactFooter: React.FC<ContactFooterProps> = ({
               <ul className="space-y-2.5 text-xs text-slate-200 font-medium">
                 <li>
                   <button
+                    onClick={() => {
+                      handlePageClick('about');
+                      setTimeout(() => {
+                        const el = document.getElementById('compliance-certifications');
+                        if (el) el.scrollIntoView({ behavior: 'smooth' });
+                      }, 100);
+                    }}
+                    className="hover:text-[#E8F86E] transition-colors text-left rtl:text-right cursor-pointer flex items-center gap-1"
+                  >
+                    <span>{language === 'ar' ? 'معايير الأيزو والتراخيص الرسمية' : 'ISO Standards & Licenses'}</span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#E8F86E]" />
+                  </button>
+                </li>
+                <li>
+                  <button
                     onClick={onOpenPdfModal}
                     className="hover:text-[#E8F86E] transition-colors text-left rtl:text-right cursor-pointer"
                   >

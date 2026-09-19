@@ -32,6 +32,7 @@ import {
   EvolutionTechSplit,
   MomentOfScaleBanner
 } from '../components/PitchDeckSections';
+import { ComplianceCertificationsSection } from '../components/ComplianceCertificationsSection';
 
 interface HomePageProps {
   onNavigate: (page: PageId) => void;
@@ -326,6 +327,14 @@ export const HomePage: React.FC<HomePageProps> = ({
       {/* 4. REFERENCE SLIDE 2 ARCHETYPE: Tri-Color Cards + Responsible Compliance Header */}
       <section className="px-4 sm:px-6 md:px-8 max-w-7xl mx-auto">
         <TriColorComplianceSection />
+      </section>
+
+      {/* 4B. COMPLIANCE & CERTIFICATIONS: ISO Standards & UAE Regulatory Accreditations (HNW Trust) */}
+      <section className="px-4 sm:px-6 md:px-8 max-w-7xl mx-auto">
+        <ComplianceCertificationsSection
+          onOpenConsultation={onOpenConsultation}
+          onOpenPdfModal={onOpenPdfModal}
+        />
       </section>
 
       {/* 5. REFERENCE SLIDE 3 ARCHETYPE: Company Solutions Stack */}

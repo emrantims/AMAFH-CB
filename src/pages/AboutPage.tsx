@@ -26,6 +26,7 @@ import {
   MomentOfScaleBanner
 } from '../components/PitchDeckSections';
 import { Breadcrumbs } from '../components/Breadcrumbs';
+import { ComplianceCertificationsSection } from '../components/ComplianceCertificationsSection';
 
 interface AboutPageProps {
   onNavigate: (page: PageId) => void;
@@ -118,6 +119,14 @@ export const AboutPage: React.FC<AboutPageProps> = ({
         <TriColorComplianceSection
           tag={language === 'ar' ? 'الحوكمة المؤسسية والنزاهة' : 'CORPORATE GOVERNANCE & INTEGRITY'}
           headline={language === 'ar' ? 'الاستقطاب المسؤول والامتثال البنكي ↘' : 'Responsible Sourcing & Banking Compliance ↘'}
+        />
+      </section>
+
+      {/* ISO Standards & UAE Regulatory Licenses Section (HNW Client Trust) */}
+      <section className="px-4 sm:px-6 md:px-8 max-w-7xl mx-auto">
+        <ComplianceCertificationsSection
+          onOpenConsultation={onOpenConsultation}
+          onOpenPdfModal={onOpenPdfModal}
         />
       </section>
 

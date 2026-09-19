@@ -136,4 +136,31 @@ export interface GlossaryTerm {
   relatedTermIds?: string[];
 }
 
+export type ComplianceCategory = 'all' | 'iso' | 'uae-license' | 'data-security' | 'sharia';
+
+export interface ComplianceCertificationItem {
+  id: string;
+  badge: string;
+  category: 'iso' | 'uae-license' | 'data-security' | 'sharia';
+  categoryLabelEn: string;
+  categoryLabelAr: string;
+  titleEn: string;
+  titleAr: string;
+  authorityEn: string;
+  authorityAr: string;
+  codeOrNumber: string;
+  shortDescEn: string;
+  shortDescAr: string;
+  hnwSignificanceEn: string;
+  hnwSignificanceAr: string;
+  keyAssurancesEn: string[];
+  keyAssurancesAr: string[];
+  status: 'Verified & Active' | 'Annual CBUAE Alignment' | 'Audited & Compliant';
+  statusAr: string;
+  iconName: 'ShieldCheck' | 'Lock' | 'Award' | 'FileCheck' | 'Landmark' | 'Scale' | 'Building2' | 'Fingerprint' | 'CheckCircle2';
+  accentColor: string;
+  validityOrCycleEn: string;
+  validityOrCycleAr: string;
+}
+
 
